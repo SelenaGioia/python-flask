@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartRooster project</title>
+</head>
+<body>
+<h1>Ambient Intelligence 2018</h1>
+<p>Welcome to my project</p>
+<p><img src="{{ url_for('static', filename="Rooster-Crowing.png") }}"></p>
+
+<form action="{{ url_for('welcome') }}" method="post">
+    <p>Enter name:
+        <input type="text" name="username"/>
+        <input type="submit" value="Login"/>
+    </p>
+
+</form>
+
+<p>&copy; <a href="{{ url_for('about') }}">SmartRooster</a></p>
+</body>
+</html>
