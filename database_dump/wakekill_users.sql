@@ -1,0 +1,2 @@
+INSERT INTO wakekill.users (id, username, password, fullname) VALUES (1, 'Fulvio', null, 'Fulvio Corno');
+INSERT INTO wakekill.users (id, username, password, fullname) VALUES (2, 'Mickey', null, 'Mickey Mouse');
