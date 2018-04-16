@@ -6,9 +6,21 @@
 </head>
 <body>
 <h1>Ambient Intelligence 2018</h1>
-<p>Welcome to my project</p>
-<p><img src="{{ url_for('static', filename="Rooster-Crowing.png") }}"></p>
+<p>Welcome to my project {{ name }}</p>
 
+{% if name=="" %}
+<p><img src="{{ url_for('static', filename="Rooster-Crowing.png") }}"></p>
+{% else %}
+    <p>Your alarms:</p>
+    <ul>
+    {% for a in alarms %}
+        <li>{{ a[1] }}</li>
+    {% endfor %}
+
+    </ul>
+{% endif %}
+
+{% if name=="" %}
 <form action="{{ url_for('welcome') }}" method="post">
     <p>Enter name:
         <input type="text" name="username"/>
@@ -16,6 +28,9 @@
     </p>
 
 </form>
+{% else %}
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+{% endif %}
 
 <p>&copy; <a href="{{ url_for('about') }}">SmartRooster</a></p>
 </body>
