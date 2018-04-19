@@ -1,0 +1,9 @@
+h1 { color: red; }
+
+h1:hover {color:green;      }
+
+#footer {
+    color: grey;
+    font-style: italic;
+    font-size: 75%;
+}
